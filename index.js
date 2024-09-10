@@ -6,7 +6,6 @@ import {
   ScrollView,
   TouchableOpacity,
   View,
-  ViewPropTypes,
   TouchableWithoutFeedback,
 } from 'react-native';
 import PropTypes from 'prop-types';
