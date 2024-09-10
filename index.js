@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 import isEqual from 'lodash.isequal';
+import {ViewPropTypes} from 'deprecated-react-native-prop-types';
 
 
 const PAGE_CHANGE_DELAY = 4000;
