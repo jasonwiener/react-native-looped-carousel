@@ -10,13 +10,13 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 import isEqual from 'lodash.isequal';
-import {ViewPropTypes} from 'deprecated-react-native-prop-types';
+import {
+  TextPropTypes,
+  ViewPropTypes
+} from 'deprecated-react-native-prop-types';
 
 
 const PAGE_CHANGE_DELAY = 4000;
-
-// if ViewPropTypes is not defined fall back to View.propTypes (to support RN < 0.44)
-const viewPropTypes = ViewPropTypes || View.propTypes;
 
 /**
  * Animates pages in cycle
@@ -28,25 +28,25 @@ export default class Carousel extends Component {
     autoplay: PropTypes.bool,
     delay: PropTypes.number,
     currentPage: PropTypes.number,
-    style: viewPropTypes.style,
-    pageStyle: viewPropTypes.style,
-    contentContainerStyle: viewPropTypes.style,
+    style: ViewPropTypes.style,
+    pageStyle: ViewPropTypes.style,
+    contentContainerStyle: ViewPropTypes.style,
     pageInfo: PropTypes.bool,
     pageInfoBackgroundColor: PropTypes.string,
-    pageInfoTextStyle: Text.propTypes.style,
-    pageInfoBottomContainerStyle: viewPropTypes.style,
+    pageInfoTextStyle: TextPropTypes.style,
+    pageInfoBottomContainerStyle: ViewPropTypes.style,
     pageInfoTextSeparator: PropTypes.string,
     bullets: PropTypes.bool,
-    bulletsContainerStyle: Text.propTypes.style,
-    bulletStyle: Text.propTypes.style,
+    bulletsContainerStyle: TextPropTypes.style,
+    bulletStyle: TextPropTypes.style,
     arrows: PropTypes.bool,
-    arrowsContainerStyle: Text.propTypes.style,
-    arrowStyle: Text.propTypes.style,
-    leftArrowStyle: Text.propTypes.style,
-    rightArrowStyle: Text.propTypes.style,
+    arrowsContainerStyle: TextPropTypes.style,
+    arrowStyle: TextPropTypes.style,
+    leftArrowStyle: TextPropTypes.style,
+    rightArrowStyle: TextPropTypes.style,
     leftArrowText: PropTypes.string,
     rightArrowText: PropTypes.string,
-    chosenBulletStyle: Text.propTypes.style,
+    chosenBulletStyle: TextPropTypes.style,
     onAnimateNextPage: PropTypes.func,
     onPageBeingChanged: PropTypes.func,
     swipe: PropTypes.bool,
